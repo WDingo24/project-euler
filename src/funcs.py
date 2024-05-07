@@ -1,6 +1,7 @@
+from typing import Generator
 from math import sqrt, factorial
 
-def primeList():
+def primeList() -> Generator:
     yield 2
     num = 1
     while True:
@@ -12,7 +13,7 @@ def primeList():
         if prime:
             yield num
 
-def collatz(start):
+def collatz(start: int) -> Generator:
     yield start
     while start != 1:
         if start % 2 == 0:

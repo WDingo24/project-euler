@@ -1,0 +1,1 @@
+with open("names.txt", "r") as file: names = sorted(file.readline().strip().replace('"', "").split(",")); print(sum([i*sum([ord(l)-64 for l in n]) for i, n in enumerate(names, start=1)]))
