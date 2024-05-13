@@ -1,3 +1,3 @@
-from funcs import primeList
+from funcs import primes
 
-print(next(x for i,x in enumerate(primeList()) if i==10000))
+print(next(x for i,x in enumerate(primes()) if i==10000))

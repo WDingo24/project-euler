@@ -1,7 +1,7 @@
 from typing import Generator
 from math import sqrt, factorial
 
-def primeList() -> Generator:
+def primes() -> Generator:
     yield 2
     num = 1
     while True:
