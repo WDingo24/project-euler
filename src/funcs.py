@@ -26,3 +26,6 @@ def collatz(start: int) -> Generator:
 
 def choice(n: int, k: int) -> float:
     return factorial(n) / (factorial(k) * factorial(n-k))
+
+def amicables() -> Generator:
+    yield int()
