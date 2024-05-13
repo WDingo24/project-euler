@@ -8,7 +8,7 @@ for x in range(1, 1001):
     elif x > 10 and x < 20:
         total += len(teens[x-11])
     elif x < 100 and x % 10 == 0:
-        total += len(tens[int(x/10)-1])
+        total += len(tens[x//10-1])
     elif x < 100:
         ten = tens[int(str(x)[0])-1]
         digit = digits[int(str(x)[1])-1]
