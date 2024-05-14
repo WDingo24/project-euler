@@ -1,6 +1,6 @@
-from funcs import primes
+from funcs import primeNumbers
 
-itr = primes()
+itr = primeNumbers()
 total = 0
 while True:
     this = next(itr)
