@@ -33,8 +33,8 @@ def collatz(start: int) -> Generator:
             start += 1
             yield start
 
-def fibonacci() -> Generator:
-    a, b = 1, 0
+def fibonacci(start: tuple=(1, 0)) -> Generator:
+    a, b = start
     while True:
         new = a + b
         a = b

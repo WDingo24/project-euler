@@ -1,9 +1,7 @@
 from funcs import fibonacci
 
-fib = fibonacci()
+fib = enumerate(fibonacci())
 num = 0
-i = 0
 while len(str(num)) < 1000:
-    num = next(fib)
-    i += 1
+    i, num = next(fib)
 print(i)

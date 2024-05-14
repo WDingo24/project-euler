@@ -1,4 +1,3 @@
-from math import sqrt
 from funcs import divisors
 
 base = 1
