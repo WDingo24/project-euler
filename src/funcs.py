@@ -46,7 +46,6 @@ def amicableNumbers() -> Generator:
     num = 1
     while True:
         divSum = sum(divisors(num))
-        b = sum(divisors(num))
         if divSum != num and num == sum(divisors(divSum)):
             yield num
         num += 1
