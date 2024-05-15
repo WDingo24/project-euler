@@ -36,9 +36,7 @@ def collatz(start: int) -> Generator:
 def fibonacci(start: tuple=(1, 0)) -> Generator:
     a, b = start
     while True:
-        new = a + b
-        a = b
-        b = new
+        a, b = b, a + b
         yield b
 
 def choice(n: int, k: int) -> float:
