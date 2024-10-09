@@ -3,11 +3,9 @@ from math import sqrt, factorial
 
 def divisors(n: int) -> Generator:
     for x in range(1, int(sqrt(n))+1):
-        if x == sqrt(n):
+        if n % x == 0:
             yield x
-        elif n % x == 0:
-            yield x
-            if x != 1:
+            if x != 1 and x != sqrt(n):
                 yield n//x
 
 def primeNumbers() -> Generator:
@@ -47,5 +45,12 @@ def amicableNumbers() -> Generator:
     while True:
         divSum = sum(divisors(num))
         if divSum != num and num == sum(divisors(divSum)):
+            yield num
+        num += 1
+
+def abundantNumbers() -> Generator:
+    num = 12
+    while True:
+        if sum(divisors(num)) > num:
             yield num
         num += 1
