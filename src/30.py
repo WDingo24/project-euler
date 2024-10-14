@@ -1,0 +1,1 @@
+print(sum([i for i in range(2, 1000000) if i == sum(map(lambda x: int(x)**5, str(i)))]))
