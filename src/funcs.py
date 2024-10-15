@@ -62,3 +62,10 @@ def isPrime(num: int) -> bool:
         if not num % i:
             return False
     return True
+
+def champernowne() -> Generator:
+    num = 0
+    while True:
+        for char in str(num):
+            yield int(char)
+        num += 1
