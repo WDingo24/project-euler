@@ -1,5 +1,6 @@
 from typing import Generator
 from math import sqrt, factorial
+from itertools import cycle
 
 def divisors(n: int) -> Generator:
     for x in range(1, int(sqrt(n))+1):
@@ -69,3 +70,29 @@ def champernowne() -> Generator:
         for char in str(num):
             yield int(char)
         num += 1
+
+def A316667(end: int) -> Generator:
+    moves = [
+        lambda x, y: (x+1, y),
+        lambda x, y: (x, y-1),
+        lambda x, y: (x-1, y),
+        lambda x, y: (x, y+1)
+    ]
+
+    moveGen = cycle(moves)
+    n = 1
+    pos = 0, 0
+    times = 1
+
+    yield n, pos
+
+    while True:
+        for _ in range(2):
+            move = next(moveGen)
+            for _ in range(times):
+                if n >= end:
+                    return
+                pos = move(*pos)
+                n += 1
+                yield n, pos
+        times += 1
