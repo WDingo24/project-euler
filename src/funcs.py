@@ -71,7 +71,7 @@ def champernowne() -> Generator:
             yield int(char)
         num += 1
 
-def A316667(end: int) -> Generator:
+def A316667_VF(end: int) -> Generator:
     moves = [
         lambda x, y: (x+1, y),
         lambda x, y: (x, y-1),

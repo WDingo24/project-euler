@@ -1,6 +1,6 @@
-from funcs import A316667
+from funcs import A316667_VF
 
-spiral = {tup: num for num, tup in A316667(1001**2)}
+spiral = {tup: num for num, tup in A316667_VF(1001**2)}
 
 diagonals = set()
 
