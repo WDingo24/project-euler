@@ -57,6 +57,10 @@ def abundantNumbers() -> Generator:
         num += 1
 
 def isPrime(num: int) -> bool:
+    if num == 1:
+        return False
+    if num in (2, 3):
+        return True
     if not num % 2 or num < 0:
         return False
     for i in range(3, int(sqrt(num))+1, 2):
